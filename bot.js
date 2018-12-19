@@ -639,7 +639,7 @@ client.on('message', message => {
         .setTitle('Click Here')
         .setURL(`${omar.avatarURL}`)
         .setImage(`${omar.avatarURL}`)
-        .setFooter('✽ GMZN Community ✽',client.user.avatarURL)
+        .setFooter('✽ Moments ✽',client.user.avatarURL)
       message.channel.sendEmbed(embed);
     }
 });
@@ -736,7 +736,7 @@ client.on('message', message => {
                         .setAuthor(message.author.username,message.author.avatarURL)
                         .setColor('RANDOM')
                         .addField('**Time Taken:**',msg + " ms :signal_strength: ")
-                        .setFooter(`✽ GMZN Bot ✽`,client.user.avatarURL)
+                        .setFooter(`✽ Moments Bot ✽`,client.user.avatarURL)
          message.channel.send({embed:embed});
                         }
                     });
@@ -865,7 +865,7 @@ m.sendMessage(args)
 //كود تغير البلاينج و الصوره والاسم
  
 const adminprefix = "*";
-const devs = ['427054141492297728','ايدي اخويك'];
+const devs = ['448590558160748545','ايدي اخويك'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -1038,7 +1038,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('【welcome-الترحيب】', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =Sal.guild.channels.find('【welcome-الترحيب】', 'black') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
     });
