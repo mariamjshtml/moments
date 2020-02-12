@@ -12,7 +12,7 @@ bot.on("message", msg => {
         .setAuthor(msg.author.username, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
         .setImage(msg.author.displayAvatarURL)
         .setColor('RANDOM')
-        .setFooter("Requested By " + msg.author.tag);
+        .setFooter("Requested By " + msg.author.tag, msg.user.displayAvatarURL);
 
     if(!Auser) return msg.channel.send(Embed).then(msg => msg.delete(10000));
 
@@ -20,7 +20,7 @@ bot.on("message", msg => {
     .setAuthor(Auser.user.username, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
     .setImage(Auser.user.displayAvatarURL)
     .setColor('RANDOM')
-    .setFooter("Requested By " + msg.author.tag);
+    .setFooter("Requested By " + msg.author.tag, msg.user.displayAvatarURL);
     if(Auser) return msg.channel.send(Aembed).then(msg => msg.delete(10000));
 
         
