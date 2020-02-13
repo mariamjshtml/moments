@@ -13,9 +13,7 @@ bot.on('message', msg => {
       .setThumbnail(msg.guild.iconURL)
       .addField('• iD:', `${msg.guild.id}`)
       .addField('• Owner:', `${msg.guild.owner}`)
-      .addField('• Owner Id:', `${msg.guild.ownerID}`)
-      .addField('• Region:', `${msg.guild.region}`)
-  
+      .addField('• Owner Id:', `${msg.guild.ownerID}`);  
       msg.channel.send(Sembed);
     }
   }); 
