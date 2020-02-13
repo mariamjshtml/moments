@@ -1,5 +1,52 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
+//antiCmdChat//
+const bannedwords = [
+  "#credit",
+  "#profile",
+  "#rep",
+  "#top",
+  "%level",
+  "%تقديم",
+  "-play",
+  "-stop",
+  "-p",
+  "-s",
+  "!invites",
+  "!top",
+  "G.play",
+  "G.stop",
+  "G.skip",
+  "-skip"
+
+]
+
+
+bot.on("message", msg => {
+    var Muted = message.guild.roles.find("name", "muted");
+    var warn = message.guild.roles.find("name", "warn");
+    if (bannedwords.some(word => msg.content.includes(word))) {
+        if(msg.channel.id !== '675659881449259041') return;
+        if(msg.author.bot) return;
+        if(msg.member.roles.has(warn)) return;
+        if(!msg.member.roles.has(warn.id)) {
+            msg.member.addRole(warn)
+            msg.reply("You Get Warn")
+        }
+        if(msg.member.roles.has(warn.id)) {
+            msg.member.addRole(Muted)
+            msg.member.removeRole(warn)
+            msg.reply("**You Get Mute**")
+        }
+    }
+    
+
+})
+    
+    
+    
+});
+//AVATAR//
 
 bot.on("message", msg => {
     const prefix = "-";
