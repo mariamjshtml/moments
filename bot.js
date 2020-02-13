@@ -2,7 +2,23 @@ const discord = require("discord.js");
 const bot = new discord.Client();
 
 
+bot.on('message', msg => {
+    const prefix = "-";
+    const cmd = msg.content.split(" ")[0];
 
+    if(cmd === `${prefix}server`) {
+      let Sembed = new Discord.RichEmbed()
+      .setAuthor(msg.author.username, msg.author.avatarURL)
+      .setTitle(`\`${msg.guild.name}\``)
+      .setThumbnail(msg.guild.iconURL)
+      .addField('• iD:', `${msg.guild.id}`)
+      .addField('• Owner:', `${msg.guild.owner}`)
+      .addField('• Owner Id:', `${msg.guild.ownerID}`)
+      .addField('• Region:', `${msg.guild.region}`)
+  
+      msg.channel.send(Sembed);
+    }
+  }); 
 
 
 bot.on("message", msg => {
@@ -36,24 +52,6 @@ msg.author.addRole("676455294078812160");
 
 }
     
-bot.on('message', msg => {
-    const prefix = "-";
-    const cmd = msg.content.split(" ")[0];
-
-    if(cmd === `${prefix}server`) {
-      let Sembed = new Discord.RichEmbed()
-      .setAuthor(msg.author.username, msg.author.avatarURL)
-      .setTitle(`\`${msg.guild.name}\``)
-      .setThumbnail(msg.guild.iconURL)
-      .addField('• iD:', `${msg.guild.id}`)
-      .addField('• Owner:', `${msg.guild.owner}`)
-      .addField('• Owner Id:', `${msg.guild.ownerID}`)
-      .addField('• Region:', `${msg.guild.region}`)
-  
-      msg.channel.send(Sembed);
-    }
-  });
-
 
 });
 
