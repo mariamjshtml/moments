@@ -48,7 +48,7 @@ bot.on('message', msg => {
       .addField('• iD:', `${msg.guild.id}`)
       .addField('• Owner:', `${msg.guild.owner}`)
       .addField('• Owner Id:', `${msg.guild.ownerID}`)
-      .addField('• Region:', `${msg.guild.region}`);
+      .addField('• Region:', `${msg.guild.region}`)
   
       msg.channel.send(Sembed);
     }
