@@ -13,8 +13,8 @@ bot.on("message", msg => {
 ==================== Bot commands =====================
 -avatar       
 `)
-        message.author.sendEmbed(Hembed);
+        msg.author.sendEmbed(Hembed);
     }    
 })
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
