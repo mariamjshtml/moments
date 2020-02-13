@@ -1,16 +1,9 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
 
-//NO DISCORD//
-bot.on('message', msg => {
-    if(msg.content.includes('discord.gg')){
-                                            if(!msg.channel.guild) return msg.reply('** You Cant  **');
-        if (!msg.member.hasPermissions(['ADMINISTRATOR'])){
-        msg.delete()
-    return msg.reply(`** ممنوع نشر الروابط :angry: ! **`)
-    }
-}
-});
+
+
+
 
 bot.on("message", msg => {
     const prefix = "-";
@@ -33,11 +26,14 @@ bot.on("message", msg => {
     .setColor('RANDOM')
     .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL);
     if(Auser) return msg.channel.send(Aembed).then(msg => msg.delete(10000));
-
-        
         
 
     }
+    
+if(msg.content.includes('discord.gg')) {
+    if(!msg.member.hasPremission("ADMINISTRATOR")) return msg.delete(0).then(msg => msg.reply("Do not post links! 😠")).then(msg => msg.member.addRole("676455294078812160")); 
+}
+
 
 });
 
