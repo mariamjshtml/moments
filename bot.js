@@ -2,29 +2,15 @@ const discord = require("discord.js");
 const bot = new discord.Client();
 //antiCmdChat//
 const bannedwords = [
-  "#credit",
-  "#profile",
-  "#rep",
-  "#top",
-  "%level",
-  "%تقديم",
-  "-play",
-  "-stop",
-  "-p",
-  "-s",
-  "!invites",
-  "!top",
-  "G.play",
-  "G.stop",
-  "G.skip",
-  "-skip"
+  "-avatar"
+
 
 ]
 
 
 bot.on("message", msg => {
-    var Muted = message.guild.roles.find("name", "muted");
-    var warn = message.guild.roles.find("name", "warn");
+    var Muted = msg.guild.roles.find("name", "muted");
+    var warn = msg.guild.roles.find("name", "warn");
     if (bannedwords.some(word => msg.content.includes(word))) {
         if(msg.channel.id !== '675659881449259041') return;
         if(msg.author.bot) return;
