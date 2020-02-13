@@ -1,6 +1,16 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
 
+//NO DISCORD//
+bot.on('message', msg => {
+    if(msg.content.includes('discord.gg')){
+                                            if(!msg.channel.guild) return msg.reply('** You Cant  **');
+        if (!msg.member.hasPermissions(['ADMINISTRATOR'])){
+        msg.delete()
+    return msg.reply(`** ممنوع نشر الروابط :angry: ! **`)
+    }
+}
+});
 
 bot.on("message", msg => {
     const prefix = "-";
