@@ -15,7 +15,7 @@ bot.on("message", msg => {
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
-    message.author.send(Hembed);
+    msg.author.send(Hembed);
     }    
 })
 
