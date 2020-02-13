@@ -66,7 +66,7 @@ bot.on("message", message => {
 .addField('**💬 Channels **',`**${message.guild.channels.filter(m => m.type === 'text').size}**` + ' text | Voice  '+ `**${message.guild.channels.filter(m => m.type === 'voice').size}** `,true)
 .addField("**🌍 Others **" , message.guild.region,true)
 .addField("**🔐 Roles **",`**[${message.guild.roles.size}]** Role `,true)
-.setColor('RANDOM');
+
         
 message.channel.send(embed);
 
