@@ -31,9 +31,8 @@ bot.on("message", msg => {
     }
     
 if(msg.content.includes('discord.gg')) {
-    if(!msg.member.hasPermission("ADMINISTRATOR")) return msg.reply("Don't post links! 😠");
-    msg.member.addRole("Muted"); 
-    msg.delete(0)
+if(!msg.member.hasPermission("ADMINISTRATOR")) return msg.reply("Don't post links! 😠").then(msg => msg.delete(0));
+msg.author.addRole("676455294078812160");
 
 }
 
