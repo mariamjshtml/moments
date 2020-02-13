@@ -16,3 +16,5 @@ bot.on("message", msg => {
         message.author.sendEmbed(Hembed);
     }    
 })
+
+client.login(process.env.BOT_TOKEN);
