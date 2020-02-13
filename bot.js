@@ -6,14 +6,16 @@ bot.on("message", msg => {
     const cmd = msg.content.split(" ")[0];
 
     if(msg.content === "-help") {
-        msg.channel.send('**تم الارسال خاص**');
+        
     const Hembed = new discord.RichEmbed()
-        .setColor("RANDOM")
-        .setDescription(`
-==================== Bot commands =====================
--avatar       
-`)
-        msg.author.sendEmbed(Hembed);
+    .setTitle("Bot Commands")
+    .setThumbnail(msg.author.displayAvatarURL)
+    .setColor("RANDOM")
+    .addField("Members Commands:", "`-AVATAR`")
+    .setTimestamp()
+    .setFooter(msg.author.tag, msg.author.displayAvatarURL);
+    
+    message.author.send(Hembed);
     }    
 })
 
