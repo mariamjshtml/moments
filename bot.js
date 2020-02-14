@@ -17,9 +17,9 @@ bot.on('message', msg => {
             .setAuthor(`${bot.user.username}`, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
             .setColor('RANDOM')
             .setTitle("**Bot Info**")
-            .addField("Bot Id:", `**${bot.user.id}**` , true)
-            .addField("Bot Name:", `**${bot.user.tag}**` , true)
-            .addField("By:", "**@abdealwaheb#2383**" , true)
+            .addField("**Bot Id:**", `${bot.user.id}` , false)
+            .addField("**Bot Name:**", `${bot.user.tag}` , false)
+            .addField("**By:**", "@abdealwaheb#2383" , false)
             .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
         msg.channel.send(BEmbed);
