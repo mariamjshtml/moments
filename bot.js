@@ -12,7 +12,7 @@ bot.on('message', msg => {
 
     if(cmd === `${prefix}server`) {
         const SEmbed = new discord.RichEmbed()
-        .setAuthor("**Done**", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
+        .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
         .setColor('RANDOM')
         .setThumbnail(msg.guild.iconURL)
         .setTitle(msg.guild.name)
