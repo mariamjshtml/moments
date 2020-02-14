@@ -16,8 +16,8 @@ bot.on("message", msg => {
     .setThumbnail(msg.author.displayAvatarURL)
     .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
     .setColor("RANDOM")
-    .addField("Joined Discord:", moment(msg.author.createdAt).format("L"), true)
-    .addField("Joined Server:", moment(msg.guild.joinedAt).format("L"), true)
+    .addField("Joined Discord:", `${moment(msg.author.createdAt).format}("L")`, true)
+    .addField("Joined Server:", `${moment(msg.guild.joinedAt).format}("L")`, true)
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
