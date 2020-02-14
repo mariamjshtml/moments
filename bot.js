@@ -16,12 +16,12 @@ bot.on('message', msg => {
         .setColor('RANDOM')
         .setThumbnail(msg.guild.iconURL)
         .setTitle(msg.guild.name)
-        .addField('🆔 Server ID:', `${msg.guild.id}` , true)
-        .addField('📆 Created On', msg.guild.createdAt.toLocaleString() , true)
-        .addField('👑 Owned By', `${msg.guild.owner}` , true)
-        .addField('👥 Members', `**${msg.guild.memberCount}**`, "Online" , true)
-        .addField('🌍 Region', "**Region:**" ,`${msg.guild.region}` , true)
-        .addField('🔐 Roles', `**${msg.guild.roles.size}**` , "Role" , true)
+        .addField('🆔 Server ID:', `${msg.guild.id}`)
+        .addField('📆 Created On', msg.guild.createdAt.toLocaleString())
+        .addField('👑 Owned By', `${msg.guild.owner}`)
+        .addField('👥 Members', `**${msg.guild.memberCount}**`, "Online")
+        .addField('🌍 Region', "**Region:**" ,`${msg.guild.region}`)
+        .addField('🔐 Roles', `**${msg.guild.roles.size}**` , "Role")
         
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
