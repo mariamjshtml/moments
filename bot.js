@@ -37,7 +37,7 @@ bot.on("message", msg => {
     .setTitle("Bot Commands")
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
-    .addField("Members Commands:", "`-avatar`")
+    .addField("Members Commands:", "`-avatar`,`-user`")
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
