@@ -25,7 +25,7 @@ bot.on("message", msg => {
         
             const Aembed = new discord.RichEmbed()
     .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
-    .addField("Joined Discord:", moment(msg.author.createdAt).format("L"), true)
+    .addField("Joined Discord:", moment(msg.user.createdAt).format("L"), true)
     .addField("Joined Server:", moment(msg.guild.joinedAt).format("L"), true)
     .setColor('RANDOM')
     .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL);
