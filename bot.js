@@ -10,7 +10,7 @@ bot.on('message', msg => {
     if (msg.content.startsWith(`-warn`)) {
       if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('Mention')
+      if (!msg.mentions.members.first()) return msg.reply("**🙄 - I can't find this member**")
       if (!args[0]) return msg.reply('اكتب السبب')
       //غير اسم الروم او سوي روم بذا الاسم 
       if (msg.guild.channels.find('name', 'warns')) {
