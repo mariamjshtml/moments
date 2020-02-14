@@ -19,9 +19,9 @@ bot.on('message', msg => {
         .addField('🆔 Server ID:', `${msg.guild.id}` , true)
         .addField('📆 Created On', msg.guild.createdAt.toLocaleString() , true)
         .addField('👑 Owned By', `${msg.guild.owner}` , true)
-        .addField('👥 Members', `**${msg.guild.memberCount}**`,'Online' , true)
-        .addField('🌍 Region', '**Region:**',`${msg.guild.region}` , true)
-        .addField('🔐 Roles', `**${msg.guild.roles.size}**`,'Role' , true)
+        .addField('👥 Members', `**${msg.guild.memberCount}**`, "Online" , true)
+        .addField('🌍 Region', "**Region:**" ,`${msg.guild.region}` , true)
+        .addField('🔐 Roles', `**${msg.guild.roles.size}**` , "Role" , true)
         
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
