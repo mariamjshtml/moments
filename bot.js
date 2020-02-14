@@ -14,7 +14,7 @@ bot.on('message', msg => {
         msg.delete(0)
         const BEmbed = new discord.RichEmbed()
             .setAuthor(bot.user.displayAvatarURL)
-            .setAuthor(`**${bot.user.username}**`, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
+            .setAuthor(`${bot.user.username}`, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
             .setColor('RANDOM')
             .setTitle("**Bot Info**")
             .addField("Bot Id:", `**${bot.user.id}**` , true)
