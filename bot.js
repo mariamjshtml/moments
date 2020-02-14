@@ -22,7 +22,7 @@ bot.on('message', msg => {
         .addField('👥 Members', `${msg.guild.memberCount}` , true)
         .addField('🌍 Region', `${msg.guild.region}` , true)
         .addField('🔐 Roles', `${msg.guild.roles.size}` , true)
-        .addField('💬 Channels', `${msg.guild.channels.size}` , true)
+        .addField('💬 Channels', `${msg.guild.channels.size}` , 'Channels', true)
         
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
