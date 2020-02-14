@@ -1,4 +1,8 @@
 const discord = require("discord.js");
+const moment= require("moment");
+const ytdl = require('ytdl-core');
+const fs = require('fs');
+const gif = require("gif-search");
 const bot = new discord.Client();
 
 bot.on("message", msg => {
