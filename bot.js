@@ -15,8 +15,8 @@ bot.on("message", msg => {
     const Dembed = new discord.RichEmbed()
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
-    .addField("Joined Discord:", "`moment(msg.author.createdAt).format("L")`", true)
-    .addField("Joined Server:", "`moment(msg.guild.joinedAt).format("L")`", true)
+    .addField("Joined Discord:", moment(msg.author.createdAt).format("L"), true)
+    .addField("Joined Server:", moment(msg.guild.joinedAt).format("L"), true)
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
