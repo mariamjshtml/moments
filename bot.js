@@ -20,6 +20,7 @@ bot.on('message', msg => {
             .addField("Bot Id:", `**${bot.user.id}**` , true)
             .addField("Bot Name:", `**${bot.user.tag}**` , true)
             .addField("By:", "**@abdealwaheb#2383**" , true)
+            .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
         msg.channel.send(BEmbed);
 
