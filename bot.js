@@ -11,7 +11,6 @@ bot.on('message', msg => {
     const cmd = msg.content.split(" ")[0];
 
     if(cmd === `${prefix}server`) {
-        msg.delete(0)
         const SEmbed = new discord.RichEmbed()
         .setAuthor("**Done**", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
         .setColor('RANDOM')
@@ -39,7 +38,6 @@ bot.on('message', msg => {
     const cmd = msg.content.split(" ")[0];
 
     if(cmd === `${prefix}bot`) {
-        msg.delete(0)
         const BEmbed = new discord.RichEmbed()
             .setAuthor(bot.user.displayAvatarURL)
             .setAuthor(`${bot.user.username}`, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
@@ -66,7 +64,6 @@ bot.on("message", msg => {
 
     if(cmd === `${prefix}user`) {        
     const Dembed = new discord.RichEmbed()
-    msg.delete(0)
     .setThumbnail(msg.author.displayAvatarURL)
     .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
     .setColor("RANDOM")
@@ -88,7 +85,6 @@ bot.on("message", msg => {
     if(msg.content === "-help") {
         
     const Hembed = new discord.RichEmbed()
-    msg.delete(0)
     .setTitle("Bot Commands")
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
