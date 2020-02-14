@@ -10,12 +10,12 @@ bot.on("message", msg => {
     const prefix = "-";
     const cmd = msg.content.split(" ")[0];
 
-    if(msg.content === "-user") {        
+    if(cmd === `${prefix}user`) {        
     const Dembed = new discord.RichEmbed()
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
-    .addField("Joined Discord:", msg.author.createdAt.toLocaleString(), msg.author.createdAt.getFullYear())
-    .addField("Joined Server:", msg.member.joinedAt.toLocaleString())
+    .addField("Joined Discord:", moment(msg.author.createdAt).format("L"))
+    .addField("Joined Server:", moment(msg.guild.joinedAt).format("L"))
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
