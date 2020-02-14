@@ -5,6 +5,7 @@ const fs = require('fs');
 const gif = require("gif-search");
 const bot = new discord.Client();
 
+//help//
 bot.on("message", msg => {
     const prefix = "-";
     const cmd = msg.content.split(" ")[0];
@@ -22,7 +23,7 @@ bot.on("message", msg => {
     msg.author.send(Hembed);
     }    
 })
-
+//avatar//
 bot.on("message", msg => {
     const prefix = "-";
     const cmd = msg.content.split(" ")[0];
