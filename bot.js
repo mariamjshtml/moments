@@ -12,16 +12,16 @@ bot.on('message', msg => {
 
     if(cmd === `${prefix}server`) {
         const SEmbed = new discord.RichEmbed()
-        .setAuthor('**Done**', "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
+        .setAuthor("**Done**", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
         .setColor('RANDOM')
         .setThumbnail(msg.guild.iconURL)
         .setTitle(msg.guild.name)
-        .addField('🆔 Server ID:', `${msg.guild.id}`)
-        .addField('📆 Created On', msg.guild.createdAt.toLocaleString())
-        .addField('👑 Owned By', `${msg.guild.owner}`)
-        .addField('👥 Members', `**${msg.guild.memberCount}**`, "Online")
-        .addField('🌍 Region', "**Region:**" ,`${msg.guild.region}`)
-        .addField('🔐 Roles', `**${msg.guild.roles.size}**` , "Role")
+        .addField('🆔 Server ID:', `${msg.guild.id}` , true)
+        .addField('📆 Created On', msg.guild.createdAt.toLocaleString() , true)
+        .addField('👑 Owned By', `${msg.guild.owner}` , true)
+        .addField('👥 Members', `${msg.guild.memberCount}` , true)
+        .addField('🌍 Region', `${msg.guild.region}` , true)
+        .addField('🔐 Roles', `${msg.guild.roles.size}` , true)
         
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
