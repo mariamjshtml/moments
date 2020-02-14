@@ -15,11 +15,14 @@ bot.on('message', msg => {
         .setAuthor('**Done**', "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
         .setColor('RANDOM')
         .setThumbnail(msg.guild.iconURL)
-        .setTitle("**Server Info**")
-        .addField('**Server Owner:**', `**${msg.guild.owner}**` , false)
-        .addField('**Server Id:**', `**${msg.guild.id}**` , false)
-        .addField('**Server Members:**', `**${msg.guild.memberCount}**` , false)
-        .addField('**Server Created:**', msg.guild.createdAt.toLocaleString())
+        .setTitle(msg.guild.name)
+        .addField('🆔 Server ID:', `${msg.guild.id}` , true)
+        .addField('📆 Created On', msg.guild.createdAt.toLocaleString() , true)
+        .addField('👑 Owned By', `${msg.guild.owner}` , true)
+        .addField('👥 Members', `${msg.guild.memberCount}` , false)
+        .addField('🌍 Region', `${msg.guild.region}` , true)
+        .addField('🔐 Roles', `${msg.guild.roles.size}` , true)
+        
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
         msg.channel.send(SEmbed);
