@@ -35,30 +35,6 @@ bot.on('message', msg => {
     }
 })
 
-//Bot
-bot.on('message', msg => {
-    const prefix = "-";
-    const cmd = msg.content.split(" ")[0];
-
-    if(cmd === `${prefix}bot`) {
-        const BEmbed = new discord.RichEmbed()
-            .setAuthor(bot.user.displayAvatarURL)
-            .setAuthor(`${bot.user.username}`, "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
-            .setColor('RANDOM')
-            .setTitle("**Bot Info**")
-            .addField("**Bot Id:**", `${bot.user.id}` , false)
-            .addField("**Bot Name:**", `${bot.user.tag}` , false)
-            .addField("**By:**", "@abdealwaheb#2383" , false)
-            .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
-
-        msg.channel.send(BEmbed);
-
-
-    }
-})
-
-    
-
 
 //User
 bot.on("message", msg => {
@@ -91,7 +67,7 @@ bot.on("message", msg => {
     .setTitle("Bot Commands")
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
-    .addField("Members Commands:", "`-avatar`,`-user`,`-bot`,`-server`")
+    .addField("Members Commands:", "`-user`,`-bot`,`-server`")
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
