@@ -5,25 +5,35 @@ const fs = require('fs');
 const gif = require("gif-search");
 const bot = new discord.Client();
 
-//User
+
 //User
 bot.on("message", msg => {
     const prefix = "-";
     const cmd = msg.content.split(" ")[0];
-
-    if(cmd === `${prefix}user`) {        
-    const Dembed = new discord.RichEmbed()
-    .setThumbnail(msg.author.displayAvatarURL)
+    
+        if(cmd === `${prefix}user`) {
+        const Duser = msg.guild.members.get(msg.content.split(" ")[1]) || msg.mentions.members.first();
+        msg.delete(0)
+        const Embed = new discord.RichEmbed()
+        .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
+        .addField("Joined Discord:", moment(msg.author.createdAt).format("L"), true)
+        .addField("Joined Server:", moment(msg.guild.joinedAt).format("L"), true)
+        .setColor('RANDOM')
+        .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL);
+            
+        if(!Duser) return msg.channel.send(Embed).then(msg => msg.delete(10000));
+        
+            const Aembed = new discord.RichEmbed()
     .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
-    .setColor("RANDOM")
     .addField("Joined Discord:", moment(msg.author.createdAt).format("L"), true)
     .addField("Joined Server:", moment(msg.guild.joinedAt).format("L"), true)
-    .setTimestamp()
-    .setFooter(msg.author.tag, msg.author.displayAvatarURL);
-    
-    msg.channel.send(Dembed);
-    }    
-})
+    .setColor('RANDOM')
+    .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL);
+    if(Duser) return msg.channel.send(Aembed).then(msg => msg.delete(10000));
+        
+
+    }
+});
 
 //help//
 bot.on("message", msg => {
