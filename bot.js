@@ -5,6 +5,28 @@ const fs = require('fs');
 const gif = require("gif-search");
 const bot = new discord.Client();
 
+//Bot
+bot.on('message', msg => {
+    const prefix = "-";
+    const cmd = msg.content.split(" ")[0];
+
+    if(cmd === `${prefix}bot`) {
+        msg.delete(0)
+        const BEmbed = new discord.RichEmbed()
+            .setAuthor(bot.user.username,bot.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle("**Bot Info**")
+            .addField("``Bot Id``",`[ ${bot.user.id} ]` , true)
+            .addField("``Bot Name``",`[ ${bot.user.tag} ]` , true)
+            .addField("``Bot Prefix:`` ", "-" , true)
+            .addField("``By:`` ", "@abdealwaheb#2383" , true)
+
+        msg.channel.send(BEmbed);
+
+
+    }
+})
+
 
 //User
 bot.on("message", msg => {
