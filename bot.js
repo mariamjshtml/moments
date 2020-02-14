@@ -5,6 +5,34 @@ const fs = require('fs');
 const gif = require("gif-search");
 const bot = new discord.Client();
 
+//Server
+bot.on('message', msg => {
+    const prefix = "-";
+    const cmd = msg.content.split(" ")[0];
+
+    if(cmd === `${prefix}server`) {
+        msg.delete(0)
+        const SEmbed = new discord.RichEmbed()
+        .setAuthor("**Done**", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
+        .setColor('RANDOM')
+        .setThumbnail(msg.guild.iconURL)
+        .setTitle("**Server Info")
+        .addField('**Server Owner:**', `${msg.guild.owner}` , false)
+        .addField('**Server Id:**', `${msg.guild.id}` , false)
+        .addField('**Server Members:**', `${msg.guild.memberCount}` , false)
+        .addField('**Server Created:**', msg.guild.createdAt.toLocaleString())
+        .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
+
+        msg.channel.send(SEmbed);
+        
+
+
+
+
+
+    }
+})
+
 //Bot
 bot.on('message', msg => {
     const prefix = "-";
@@ -38,6 +66,7 @@ bot.on("message", msg => {
 
     if(cmd === `${prefix}user`) {        
     const Dembed = new discord.RichEmbed()
+    msg.delete(0)
     .setThumbnail(msg.author.displayAvatarURL)
     .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
     .setColor("RANDOM")
@@ -59,10 +88,11 @@ bot.on("message", msg => {
     if(msg.content === "-help") {
         
     const Hembed = new discord.RichEmbed()
+    msg.delete(0)
     .setTitle("Bot Commands")
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
-    .addField("Members Commands:", "`-avatar`,`-user`,`-bot`")
+    .addField("Members Commands:", "`-avatar`,`-user`,`-bot`,`-server`")
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
