@@ -5,6 +5,24 @@ const fs = require('fs');
 const gif = require("gif-search");
 const bot = new discord.Client();
 
+//User
+bot.on("message", msg => {
+    const prefix = "-";
+    const cmd = msg.content.split(" ")[0];
+
+    if(msg.content === "-user") {
+        
+    const IDembed = new discord.RichEmbed()
+    .setThumbnail(msg.author.displayAvatarURL)
+    .setColor("RANDOM")
+    .addField("Joined Discord:", msg.author.createdAt.toLocaleString(), msg.author.createdAt.getFullYear())
+    .addField("Joined Server:", msg.member.joinedAt.toLocaleString())
+    .setTimestamp()
+    .setFooter(msg.author.tag, msg.author.displayAvatarURL);
+    
+    msg.channel.send(IDHembed);
+    }    
+})
 
 //help//
 bot.on("message", msg => {
