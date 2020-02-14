@@ -10,9 +10,8 @@ bot.on("message", msg => {
     const prefix = "-";
     const cmd = msg.content.split(" ")[0];
 
-    if(msg.content === "-user") {
-        
-    const IDembed = new discord.RichEmbed()
+    if(msg.content === "-user") {        
+    const Dembed = new discord.RichEmbed()
     .setThumbnail(msg.author.displayAvatarURL)
     .setColor("RANDOM")
     .addField("Joined Discord:", msg.author.createdAt.toLocaleString(), msg.author.createdAt.getFullYear())
@@ -20,7 +19,7 @@ bot.on("message", msg => {
     .setTimestamp()
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
-    msg.channel.send(IDHembed);
+    msg.channel.send(Dembed);
     }    
 })
 
