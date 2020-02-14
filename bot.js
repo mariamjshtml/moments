@@ -22,23 +22,8 @@ bot.on("message", msg => {
     .setFooter(msg.author.tag, msg.author.displayAvatarURL);
     
     msg.channel.send(Dembed);
-
-  const bUser = msg.guild.members.get(msg.content.split(" ")[1]) || msg.mentions.members.first();
-
-const embed = new discord.RichEmbed()
-    .setThumbnail(bUser.displayAvatarURL)
-    .setAuthor("Done", "https://images-ext-2.discordapp.net/external/qZqmfbFGs1UWqmOXggpOG8aM7TguT6rERqk3119FRIc/%3Fv%3D1/https/cdn.discordapp.com/emojis/547902692652220428.gif")
-    .setColor("RANDOM")
-    .addField("Joined Discord:", moment(bUser.createdAt).format("L"), true)
-    .addField("Joined Server:", moment(bUser.guild.joinedAt).format("L"), true)
-    .setTimestamp()
-    .setFooter(msg.author.tag, msg.author.displayAvatarURL);
-    
-    msg.channel.send(embed);
-
     }    
 })
-    
      
 
 //help//
