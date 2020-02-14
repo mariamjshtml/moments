@@ -16,10 +16,10 @@ bot.on('message', msg => {
         .setColor('RANDOM')
         .setThumbnail(msg.guild.iconURL)
         .setTitle("**Server Info**")
-        .addField('**Server Owner:**', ```${msg.guild.owner}``` , false)
-        .addField('**Server Id:**', ```${msg.guild.id}``` , false)
-        .addField('**Server Members:**', ```${msg.guild.memberCount}``` , false)
-        .addField('**Server Created:**', ```msg.guild.createdAt.toLocaleString()```)
+        .addField('**Server Owner:**', `**${msg.guild.owner}**` , false)
+        .addField('**Server Id:**', `**${msg.guild.id}**` , false)
+        .addField('**Server Members:**', `**${msg.guild.memberCount}**` , false)
+        .addField('**Server Created:**', `**msg.guild.createdAt.toLocaleString()**`)
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
         msg.channel.send(SEmbed);
