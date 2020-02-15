@@ -25,7 +25,7 @@ bot.on('message', msg => {
         .addField('👥 **Members**', `${msg.guild.memberCount} **Members**` , true)
         .addField('🌍 **Region**', ` **Region:** ${msg.guild.region}` , true)
         .addField('🔐 **Roles**', `${msg.guild.roles.size} **Role**` , true)
-        .addField('💬 **Channels**', `**${msg.guild.channels.size}** Channel` , true)
+        .addField('💬 **Channels**', `${msg.guild.channels.size} **Channel**` , true)
         .addField('🛡️ **Security**', ` **Level:** ${msg.guild.verificationLevel}` , true)
         
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
