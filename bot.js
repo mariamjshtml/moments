@@ -5,25 +5,8 @@ const fs = require('fs');
 const gif = require("gif-search");
 const bot = new discord.Client();
 
-//Clear
-bot.on('message', msg => {
-    const prefix = "-";
-    const cmd = msg.content.split(" ")[0];
 
 
-    if(cmd === `${prefix}clear`) {
-        if(!msg.channel.guild) return msg.reply('⛔ | This Command For Servers Only!');
-            if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.channel.send('⛔ | You dont have Permission!');
-    let args = msg.content.split(" ").slice(1)
-        let messagecount = parseInt(args)
-            if(arg > 200) return msg.reply("You Can Delete 200 Message").then(messages => messages.delete(1000))
-            if(!messagecount) args = '200';
-            msg.fetchMessages({limit: messagecount + 1}).then(messages => msg.channel.bulkDelete());
-            msg.channel.send(" ").then(messages => messages.delete(1000));
-
-
-    }
-})
 
 //Server
 bot.on('message', msg => {
