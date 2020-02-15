@@ -22,11 +22,11 @@ bot.on('message', msg => {
         .addField('🆔 **Server ID:**', `**${msg.guild.id}**` , true)
         .addField('📆 **Created On**', msg.guild.createdAt.toLocaleString() , true)
         .addField('👑 **Owned By**', `${msg.guild.owner}` , true)
-        .addField('👥 **Members**', `**${msg.guild.memberCount}** Member` , true)
-        .addField('🌍 **Region**', ` Region: **${msg.guild.region}**` , true)
-        .addField('🔐 **Roles**', `**${msg.guild.roles.size}** Role` , true)
-        .addField('💬 **Channels**', `**${msg.guild.channels.size}**` , true)
-        .addField('🛡️ **Security**', `**${msg.guild.verificationLevel}**` , true)
+        .addField('👥 **Members**', `**${msg.guild.memberCount}** Members` , true)
+        .addField('🌍 **Region**', ` **Region:** ${msg.guild.region}` , true)
+        .addField('🔐 **Roles**', `${msg.guild.roles.size} **Role**` , true)
+        .addField('💬 **Channels**', `${msg.guild.channels.size} **Channel**` , true)
+        .addField('🛡️ **Security**', ` **Level:** ${msg.guild.verificationLevel}` , true)
         
         .setFooter("Requested By " + msg.author.tag, msg.author.displayAvatarURL)
 
